@@ -4,7 +4,7 @@ import random
 def two_sum_1():
     found = []
     added = []
-    for i in range(0, len(nums)):
+    for i in range(len(nums)):
         if target - nums[i] in nums and nums.index(target - nums[i]) not in added:
             found.append((i, nums.index(target - nums[i])))
             added.append(i)
@@ -37,5 +37,5 @@ nums = list(set(arr))
 target = random.randint(1, 20)
 print(f'nums: {nums}')
 print(f'target: {target}')
-# print(two_sum_1())
+print(two_sum_1())
 print(two_sum_2())
