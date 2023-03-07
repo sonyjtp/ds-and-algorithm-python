@@ -13,10 +13,7 @@ def prefix_sum():
     for i in range(1, len(nums)):
         prefix.append(nums[i] + prefix[i - 1])
     for query in queries:
-        if query[0] == 0:
-            sum_of_subarray = prefix[query[1]]
-        else:
-            sum_of_subarray = prefix[query[1]] - prefix[query[0] - 1]
+        sum_of_subarray = prefix[query[1]] - prefix[query[0]] + nums[query[0]]
         result.append(sum_of_subarray < limit)
     return result
 
@@ -24,7 +21,5 @@ def prefix_sum():
 nums = [random.randint(1, 10) for x in range(15)]
 queries = [[random.randint(0, 5), random.randint(5, 9)] for x in range(6)]
 limit = random.randint(20, 30)
-print(nums)
-print(queries)
-print(limit)
+print(f'nums: {nums}\nqueries: {queries}\nlimit: {limit}')
 print(prefix_sum())
