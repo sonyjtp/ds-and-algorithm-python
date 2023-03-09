@@ -12,8 +12,8 @@ def prefix_sum():
     result = []
     for i in range(1, len(nums)):
         prefix.append(nums[i] + prefix[i - 1])
-    for query in queries:
-        sum_of_subarray = prefix[query[1]] - prefix[query[0]] + nums[query[0]]
+    for x, y in queries:
+        sum_of_subarray = prefix[y] - prefix[x] + nums[x]
         result.append(sum_of_subarray < limit)
     return result
 

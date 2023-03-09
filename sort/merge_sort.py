@@ -28,7 +28,7 @@ def merge_sort(nums):
             k += 1
 
 
-# numbers = [random.randint(1, 1000) for x in range(1, 20)]
-# print(f'Unsorted list: {numbers}')
-# merge_sort(numbers)
-# print(f'Sorted list: {numbers}')
+numbers = [random.randint(1, 1000) for x in range(1, 20)]
+print(f'Unsorted list: {numbers}')
+merge_sort(numbers)
+print(f'Sorted list: {numbers}')
