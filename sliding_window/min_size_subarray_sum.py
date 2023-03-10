@@ -7,10 +7,11 @@ def min_subarray_len():
     if sum(nums) < target:
         return 0
     left = sum_of_nums = 0
-    result = len(nums)
-    for right in range(len(nums)):
+    num_len = len(nums)
+    result = num_len
+    for right in range(num_len):
         sum_of_nums += nums[right]
-        while sum_of_nums >= target and left <= right:
+        while sum_of_nums >= target:
             result = min(result, right - left + 1)
             sum_of_nums -= nums[left]
             left += 1
