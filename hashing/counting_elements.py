@@ -23,4 +23,4 @@ def counting_elements():
 nums = [random.randint(1, 15) for x in range(1, 20)]
 random.shuffle(nums)
 print(nums)
-print(counting_elements())
+print(f'No. of elements such that n + 1 is also in the array: {counting_elements()}')
