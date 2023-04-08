@@ -1,6 +1,7 @@
+# https://tinyurl.com/leetcode014
+
 from collections import defaultdict
 import random
-# https://leetcode.com/explore/interview/card/leetcodes-interview-crash-course-data-structures-and-algorithms/705/hashing/4662/
 
 def largest_unique_number():
     num_dict = defaultdict(int)
